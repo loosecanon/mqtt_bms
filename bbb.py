@@ -13,6 +13,7 @@ def __main__():
     l.start(60.0)
     reactor.run()
     while(messages < 100):
+        print("messages : " + str(messages))
         if(messages > 90):
             l.stop()
 
