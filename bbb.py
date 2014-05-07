@@ -12,7 +12,9 @@ def __main__():
     l = task.LoopingCall(runEveryMinute)
     l.start(60.0)
     reactor.run()
-
+    while(messages < 100):
+        if(messages > 90):
+            l.stop()
 
 def runEveryMinute():
     now = datetime.now()
