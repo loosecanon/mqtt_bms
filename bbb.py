@@ -4,7 +4,7 @@ from datetime import datetime
 
 messages = 0
 client = mosquitto.Mosquitto("bfc_beaglebone")
-l = task.LoopingCall(runEveryMinute)
+l = task.LoopingCall()
 rc = 0
 
 def __main__():
